@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ data.materia }} – Examen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --primary: #6C63FF;
+      --accent: #FF6584;
+      --bg: #0F0E17;
+      --surface: #1C1B2E;
+      --surface2: #252340;
+      --text: #FFFFFE;
+      --muted: #A7A9BE;
+      --radius: 16px;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 20px 16px 60px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 28px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .back-btn {
+      background: var(--surface);
+      border: 1px solid var(--surface2);
+      color: var(--muted);
+      border-radius: 12px;
+      padding: 10px 16px;
+      font-size: 0.9rem;
+      font-family: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .back-btn:hover {
+      background: var(--surface2);
+      color: var(--text);
+    }
+
+    .materia-title {
+      font-size: clamp(1.2rem, 5vw, 1.8rem);
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .pregunta-card {
+      background: var(--surface);
+      border: 2px solid var(--surface2);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+      transition: border-color 0.2s;
+    }
+
+    .pregunta-card:focus-within {
+      border-color: var(--primary);
+    }
+
+    .pregunta-num {
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      color: var(--primary);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .enunciado {
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.5;
+      margin-bottom: 18px;
+    }
+
+    .opciones {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .opcion-item {
+      position: relative;
+    }
+
+    .opcion-item input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .opcion-label {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--surface2);
+      border: 2px solid transparent;
+      border-radius: 12px;
+      padding: 14px 16px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .opcion-label:hover {
+      border-color: var(--primary);
+      background: rgba(108, 99, 255, 0.08);
+    }
+
+    .opcion-item input[type="radio"]:checked~.opcion-label {
+      border-color: var(--primary);
+      background: rgba(108, 99, 255, 0.18);
+    }
+
+    .opcion-item input[type="radio"]:checked~.opcion-label .opcion-key {
+      background: var(--primary);
+      color: white;
+    }
+
+    .opcion-key {
+      min-width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--surface);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 0.8rem;
+      color: var(--primary);
+      flex-shrink: 0;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .btn-submit {
+      width: 100%;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      border: none;
+      border-radius: var(--radius);
+      padding: 18px;
+      font-size: 1.1rem;
+      font-weight: 900;
+      font-family: inherit;
+      cursor: pointer;
+      letter-spacing: 0.02em;
+      transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
+      box-shadow: 0 6px 20px rgba(108, 99, 255, 0.3);
+      margin-top: 8px;
+    }
+
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(108, 99, 255, 0.45);
+    }
+
+    .btn-submit:active {
+      transform: scale(0.98);
+    }
+
+    .alert-banner {
+      display: none;
+      background: #3a1a2e;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      border-radius: 12px;
+      padding: 14px 18px;
+      font-weight: 700;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <a href="{{ url_for('index') }}" class="back-btn">← Atrás</a>
+    <h1 class="materia-title">📖 {{ data.materia }}</h1>
+  </div>
+
+  <form method="POST" action="{{ url_for('submit') }}" id="exam-form" novalidate>
+    {% for i in range(data.preguntas | length) %}
+    {% set pregunta = data.preguntas[i] %}
+    <div class="pregunta-card" id="card_{{ i }}">
+      <div class="pregunta-num">Pregunta {{ i + 1 }} de {{ data.preguntas | length }}</div>
+      <div class="enunciado">{{ pregunta.enunciado }}</div>
+      <div class="opciones">
+        {% for letra, texto in pregunta.opciones.items() %}
+        <div class="opcion-item">
+          <input type="radio" name="pregunta_{{ i }}" id="p{{ i }}_{{ letra }}" value="{{ letra }}">
+          <label class="opcion-label" for="p{{ i }}_{{ letra }}">
+            <span class="opcion-key">{{ letra | upper }}</span>
+            <span>{{ texto }}</span>
+          </label>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+
+    <div class="alert-banner" id="alert-msg">⚠️ Por favor responde todas las preguntas antes de entregar.</div>
+    <button type="submit" class="btn-submit">✅ Entregar Examen</button>
+  </form>
+
+  <script>
+    const form = document.getElementById('exam-form');
+    const total = {{ data.preguntas | length }};
+
+    form.addEventListener('submit', function (e) {
+      let allAnswered = true;
+      for (let i = 0; i < total; i++) {
+        const chosen = form.querySelector(`input[name="pregunta_${i}"]:checked`);
+        if (!chosen) {
+          allAnswered = false;
+          document.getElementById(`card_${i}`).style.borderColor = '#FF6584';
+        } else {
+          document.getElementById(`card_${i}`).style.borderColor = '';
+        }
+      }
+      if (!allAnswered) {
+        e.preventDefault();
+        document.getElementById('alert-msg').style.display = 'block';
+        document.getElementById('alert-msg').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
+  </script>
+</body>
+
+</html>

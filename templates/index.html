@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exámenes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #6C63FF;
+      --primary-dark: #4E46D9;
+      --accent: #FF6584;
+      --success: #43D9AD;
+      --bg: #0F0E17;
+      --surface: #1C1B2E;
+      --surface2: #252340;
+      --text: #FFFFFE;
+      --muted: #A7A9BE;
+      --radius: 16px;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px 16px;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .hero .emoji { font-size: 64px; display: block; margin-bottom: 12px; animation: bounce 2s infinite; }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    h1 {
+      font-size: clamp(1.8rem, 6vw, 2.8rem);
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-top: 8px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .exam-card {
+      background: var(--surface);
+      border: 1px solid var(--surface2);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      text-align: center;
+      text-decoration: none;
+      color: var(--text);
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .exam-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(108, 99, 255, 0.25);
+      border-color: var(--primary);
+    }
+
+    .exam-card .icon {
+      font-size: 48px;
+      display: block;
+    }
+
+    .exam-card .name {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .exam-card .tag {
+      background: var(--surface2);
+      color: var(--primary);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 99px;
+      letter-spacing: 0.05em;
+    }
+
+    .empty {
+      text-align: center;
+      color: var(--muted);
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 48px 24px;
+      max-width: 480px;
+      width: 100%;
+    }
+
+    .empty .big { font-size: 56px; display: block; margin-bottom: 16px; }
+    .empty p { font-size: 0.95rem; line-height: 1.6; }
+    .empty code {
+      background: var(--surface2);
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <span class="emoji">🎓</span>
+    <h1>Mis Exámenes</h1>
+    <p class="subtitle">Elige un examen para comenzar</p>
+  </div>
+
+  {% if exams %}
+  <div class="card-grid">
+    {% for exam in exams %}
+    <a class="exam-card" href="{{ url_for('examen', filename=exam) }}">
+      <span class="icon">📚</span>
+      <span class="name">{{ exam.replace('.json','').replace('_',' ').title() }}</span>
+      <span class="tag">INICIAR</span>
+    </a>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="empty">
+    <span class="big">📂</span>
+    <p>No hay exámenes disponibles aún.<br>Agrega archivos <code>.json</code> a la carpeta <code>examenes/</code> para comenzar.</p>
+  </div>
+  {% endif %}
+</body>
+</html>

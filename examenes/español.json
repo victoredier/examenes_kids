@@ -1,0 +1,205 @@
+{
+  "materia": "Español",
+  "preguntas": [
+    {
+      "enunciado": "¿Qué categoría gramatical se usa para nombrar personas, animales, objetos o lugares?",
+      "opciones": {
+        "a": "Adjetivos",
+        "b": "Sustantivos",
+        "c": "Verbos",
+        "d": "Preposiciones"
+      },
+      "respuesta": "b"
+    },
+    {
+      "enunciado": "En la oración 'El perro corre rápido', ¿cuál es el verbo?",
+      "opciones": {
+        "a": "Perro",
+        "b": "El",
+        "c": "Rápido",
+        "d": "Corre"
+      },
+      "respuesta": "d"
+    },
+    {
+      "enunciado": "¿Cuál de estas palabras es un adjetivo calificativo?",
+      "opciones": {
+        "a": "Brillante",
+        "b": "Caminar",
+        "c": "Ellos",
+        "d": "Mesa"
+      },
+      "respuesta": "a"
+    },
+    {
+      "enunciado": "¿Qué es un mito?",
+      "opciones": {
+        "a": "Una noticia de un periódico sobre eventos actuales.",
+        "b": "Un manual de instrucciones para armar juguetes.",
+        "c": "Una historia sagrada que explica el origen del mundo o cosas de la naturaleza.",
+        "d": "Un poema corto que rima y habla de sentimientos."
+      },
+      "respuesta": "c"
+    },
+    {
+      "enunciado": "¿Cómo se llaman los mitos que explican el origen del universo?",
+      "opciones": {
+        "a": "Mitos morales",
+        "b": "Mitos etiológicos",
+        "c": "Mitos cosmogónicos",
+        "d": "Mitos heroicos"
+      },
+      "respuesta": "c"
+    },
+    {
+      "enunciado": "Si un mito explica por qué el jaguar tiene manchas, ¿qué tipo de mito es?",
+      "opciones": {
+        "a": "Etiológico",
+        "b": "Teogónico",
+        "c": "Escatológico",
+        "d": "Antropogónico"
+      },
+      "respuesta": "a"
+    },
+    {
+      "enunciado": "En el cuento 'El Ruiseñor y la Rosa', ¿por qué el estudiante necesitaba una rosa roja?",
+      "opciones": {
+        "a": "Para ganar un concurso de jardinería.",
+        "b": "Para decorar su habitación de estudio.",
+        "c": "Para dársela a una joven y que ella bailara con él.",
+        "d": "Porque era un regalo para su mamá."
+      },
+      "respuesta": "c"
+    },
+    {
+      "enunciado": "¿Qué sacrificio hizo el ruiseñor para conseguir la rosa roja?",
+      "opciones": {
+        "a": "Viajó por todo el mundo buscando una semilla.",
+        "b": "Dio su vida cantando con una espina clavada en su pecho.",
+        "c": "Trabajó todo el invierno cuidando el jardín del estudiante.",
+        "d": "Vendió sus hermosas plumas para comprar la flor."
+      },
+      "respuesta": "b"
+    },
+    {
+      "enunciado": "¿Qué hizo el estudiante con la rosa al final del cuento?",
+      "opciones": {
+        "a": "La guardó para siempre en un libro.",
+        "b": "La tiró al arroyo y un carro le pasó por encima.",
+        "c": "Se la entregó a la joven y vivieron felices.",
+        "d": "La plantó para que crecieran más rosas."
+      },
+      "respuesta": "b"
+    },
+    {
+      "enunciado": "¿De qué estaba cubierta originalmente la estatua del Príncipe Feliz?",
+      "opciones": {
+        "a": "De pintura brillante.",
+        "b": "De finas láminas de oro.",
+        "c": "De cemento y piedra.",
+        "d": "De diamantes y plata."
+      },
+      "respuesta": "b"
+    },
+    {
+      "enunciado": "¿Quién ayudó al Príncipe Feliz a repartir sus riquezas a los pobres?",
+      "opciones": {
+        "a": "Una paloma blanca.",
+        "b": "Un ratón de campo.",
+        "c": "Una golondrina.",
+        "d": "Un ángel del cielo."
+      },
+      "respuesta": "c"
+    },
+    {
+      "enunciado": "¿Qué pasó con el corazón de plomo del Príncipe cuando la estatua fue fundida?",
+      "opciones": {
+        "a": "Se derritió por completo.",
+        "b": "Se rompió en dos y no se fundió.",
+        "c": "Se convirtió en oro real.",
+        "d": "Fue robado por los concejales de la ciudad."
+      },
+      "respuesta": "b"
+    },
+    {
+      "enunciado": "En el cuento 'El Cohete Extraordinario', ¿cómo se describe a sí mismo el cohete?",
+      "opciones": {
+        "a": "Como un objeto humilde y servicial.",
+        "b": "Como alguien muy importante, sensible y superior a los demás.",
+        "c": "Como el cohete más rápido del espacio.",
+        "d": "Como un juguete divertido para los niños."
+      },
+      "respuesta": "b"
+    },
+    {
+      "enunciado": "¿Por qué el cohete no salió disparado junto con los otros fuegos artificiales?",
+      "opciones": {
+        "a": "Porque se le acabó la pólvora.",
+        "b": "Porque tenía miedo a las alturas.",
+        "c": "Porque se mojó con sus propias lágrimas de orgullo.",
+        "d": "Porque el rey olvidó encenderlo."
+      },
+      "respuesta": "c"
+    },
+    {
+      "enunciado": "¿Dónde terminó el cohete después de que lo tiraran por encima de la pared?",
+      "opciones": {
+        "a": "En un palacio real.",
+        "b": "En un museo de inventos.",
+        "c": "En un charco de lodo.",
+        "d": "En la cima de una montaña."
+      },
+      "respuesta": "c"
+    },
+    {
+      "enunciado": "¿Cuál de estas palabras es un pronombre personal?",
+      "opciones": {
+        "a": "Nosotros",
+        "b": "Correr",
+        "c": "Bonito",
+        "d": "Casa"
+      },
+      "respuesta": "a"
+    },
+    {
+      "enunciado": "¿Qué personajes suelen aparecer en los mitos?",
+      "opciones": {
+        "a": "Personas comunes haciendo cosas normales.",
+        "b": "Dioses, semidioses y héroes con poderes especiales.",
+        "c": "Científicos explicando experimentos.",
+        "d": "Animales que hablan en una granja."
+      },
+      "respuesta": "b"
+    },
+    {
+      "enunciado": "¿Qué representan los ojos del Príncipe Feliz?",
+      "opciones": {
+        "a": "Dos rubíes rojos.",
+        "b": "Dos esmeraldas verdes.",
+        "c": "Dos zafiros raros.",
+        "d": "Dos perlas blancas."
+      },
+      "respuesta": "c"
+    },
+    {
+      "enunciado": "En 'El Ruiseñor y la Rosa', ¿qué opinaba el Lagarto Verde sobre llorar por una rosa roja?",
+      "opciones": {
+        "a": "Que era muy romántico.",
+        "b": "Que era una ridiculez.",
+        "c": "Que era un acto de valentía.",
+        "d": "Que él también quería una."
+      },
+      "respuesta": "b"
+    },
+    {
+      "enunciado": "¿Cuál es la principal enseñanza o tema de los cuentos de Oscar Wilde mencionados?",
+      "opciones": {
+        "a": "Que lo más importante es tener mucho dinero.",
+        "b": "El valor del sacrificio, la generosidad y la verdadera belleza.",
+        "c": "Que hay que ser orgulloso como el cohete.",
+        "d": "Que los libros de ciencia son mejores que los cuentos."
+      },
+      "respuesta": "b"
+    }
+  ]
+}

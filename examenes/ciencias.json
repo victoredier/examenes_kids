@@ -1,0 +1,50 @@
+{
+  "materia": "Ciencias",
+  "preguntas": [
+    {
+      "enunciado": "¿Cuál es el planeta más cercano al Sol?",
+      "opciones": {
+        "a": "Venus",
+        "b": "Mercurio",
+        "c": "Marte"
+      },
+      "respuesta": "b"
+    },
+    {
+      "enunciado": "¿Cuántos huesos tiene el cuerpo humano adulto?",
+      "opciones": {
+        "a": "206",
+        "b": "198",
+        "c": "215"
+      },
+      "respuesta": "a"
+    },
+    {
+      "enunciado": "¿Cuál es el proceso mediante el cual las plantas producen su propio alimento?",
+      "opciones": {
+        "a": "Respiración",
+        "b": "Digestión",
+        "c": "Fotosíntesis"
+      },
+      "respuesta": "c"
+    },
+    {
+      "enunciado": "¿Qué gas es esencial para la respiración humana?",
+      "opciones": {
+        "a": "Dióxido de carbono",
+        "b": "Oxígeno",
+        "c": "Nitrógeno"
+      },
+      "respuesta": "b"
+    },
+    {
+      "enunciado": "¿Cuál es la célula más grande del cuerpo humano?",
+      "opciones": {
+        "a": "Neurona",
+        "b": "Glóbulo rojo",
+        "c": "Óvulo"
+      },
+      "respuesta": "c"
+    }
+  ]
+}
